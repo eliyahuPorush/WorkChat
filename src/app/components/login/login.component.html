@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="col">
+            <form class="form-signin" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center">Hello!</h1>
+        <div class="social-login d-flex flex-wrap justify-content-between">
+            <button (click)="loginWithFacebook()" class="btn facebook-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+            <button (click)="loginWithGoogle()" class="btn google-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google</span> </button>
+        </div>
+        <p style="text-align:center"> OR  </p>
+        <input type="email" class="form-control" placeholder="Email address" formControlName="email">
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        <br>
+        <button  [disabled]="loginForm.invalid" class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>Log In</button>
+        <hr>
+        <!-- <p>Don't have an account!</p>  -->
+        <button  (click)="onCreateAccount()" class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Create A New Account</button>
+        <div *ngIf="errorMessage" class="row alert alert-danger">{{errorMessage}}</div>
+        </form>
+    </div>
+</div>

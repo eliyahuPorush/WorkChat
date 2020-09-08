@@ -1,0 +1,11 @@
+<div class="messages-cont">
+    <ul *ngFor="let message of messages | async">
+    <div [ngClass]="{owner: ownerMessage(message[1])}" class="message">{{message[0]}}</div>
+</ul>
+</div>
+
+<!-- <div *ngIf="!messagesLoded" class="spinner-border" role="status">   spinner !!
+    <span class="sr-only">Loading...</span>
+</div> -->
+
+<!-- spiner need to take care of -->

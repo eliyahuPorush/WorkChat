@@ -1,0 +1,48 @@
+.chat{
+    display: flex ;
+    flex-direction: column ;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+h1{
+    z-index: 3;
+}
+.friend-details{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 10px #888888;;
+    border: 2px solid black ;
+    z-index: 3;
+    position: fixed;
+    top: 30% ;
+    right: 5%;
+    width: 15% ;
+    background-color:white ;
+    text-align: center ;
+    max-width: 15%;
+}
+.name{
+    float: left;
+    color: #040450 ;
+    font-style: oblique ;
+    position: relative ;
+    left: 80%;
+    top: 10% ;
+}
+.card-title{
+    color: #040450 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-style: italic ;
+    font-size: 4ch;
+}
+.card-text{
+    color: black;
+    font-size: 2ch ;
+}
+.img{
+    margin: auto ;  
+}
+.dropdown-toggle{
+    width: 10vw;
+}

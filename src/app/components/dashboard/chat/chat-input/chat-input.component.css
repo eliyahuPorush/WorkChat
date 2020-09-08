@@ -1,0 +1,20 @@
+.input-text{
+    border-radius: 5%;
+    width: 50vw;
+    border: gray solid 2px;
+    
+    
+}
+.input-text:focus{
+    border: 3px solid #555;
+
+}
+.input-group-text{
+    position: fixed;
+    bottom: 5%;
+   /* z-index: 1;
+    margin-left: 3%;
+    height: 6vh; */
+
+}
+

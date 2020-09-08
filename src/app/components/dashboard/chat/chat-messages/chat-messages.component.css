@@ -1,0 +1,30 @@
+.message{
+    border: lightgreen solid 1px ;
+    padding: 5px;
+    max-width: 30vw;
+    border-radius: 15px;
+    color: white ;
+    background-color: rgba(206, 202, 231, 0.432);
+    min-width: 40vh;
+    color: black;
+}
+
+.friend-name{
+    position: relative;
+    top: 40%;
+    left: 40%;
+}
+
+.spinner-border{
+    position: relative;
+    left: 50%;
+}
+.messages-cont{
+    height: 87vh;
+    width: 89.5vw ;
+}
+.owner{
+    background-color: rgb(129, 156, 187) ;
+    margin-left: 30% ;
+    color: white;
+}

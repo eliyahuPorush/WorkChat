@@ -1,0 +1,32 @@
+    <div *ngIf="!listLoded" class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+<div [ngClass]="{blur: !listLoded}" >
+    <header class="header justify-content-end">
+        <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link btn-outline-dark btn-sm text-light" (click)="addFriend()">Add Friend</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-outline-dark btn-sm text-light" (click)="logout()">Logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link btn-outline-dark btn-sm text-light" (click)="profile()">My Profile</a>
+        </li>
+        </ul>
+            <h3 class="nav-item user-name" style="text-align: center">
+                <b>Hello </b><span>{{userName | name}}</span>
+                    <img 
+                    class="nav-item image-circle" 
+                    src="{{photo}}"
+                    >
+            </h3>
+ 
+    </header>
+
+
+    <div class="dash">
+        <app-users-list (isLoded)="listLoded = true"></app-users-list>
+        <router-outlet></router-outlet>
+    </div>
+</div>

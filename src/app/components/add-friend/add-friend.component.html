@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <form [formGroup]="addFriendForm" (ngSubmit)="onSubmit()">
+            <h4 class="h4">Add Your Friend Details</h4>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input type="text" class="form-control" formControlName="email">
+            </div>
+            <div *ngIf="addFriendForm.invalid && addFriendForm.controls.email.touched && addFriendForm.controls.name.touched" class="form-control alert alert-dark">Did you miss something?</div>
+            <button class="btn btn-primary form-control" type="submit">Add</button>
+        </form>
+    </div>
+</div>

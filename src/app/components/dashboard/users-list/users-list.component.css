@@ -1,0 +1,31 @@
+
+   .col-12{
+       height: 100vh;
+       overflow-y: auto;
+   }
+
+.friend{
+    color: black ; 
+    /* background-color: #321c4b; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+}
+.friend:hover{
+    /* background-color: rgb(75, 36, 112); */
+    color: #13013b ; 
+    cursor: pointer;
+}
+
+.add-friend{
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+
+}
+.image-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50% ;
+}
