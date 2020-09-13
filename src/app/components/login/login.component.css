@@ -2,8 +2,8 @@
 .container{
     padding: 2% ;
     margin-top: 3% ;
-    box-shadow: 5px 10px #888888;
-    border: #888444 2px solid ;
+    /* box-shadow: 5px 10px #888888;
+    border: #888444 2px solid ; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     width: 40vw;
     
@@ -17,4 +17,8 @@
 }
 .google-btn:hover, .facebook-btn:hover{
     color: white;
+}
+.welcome{
+    text-align: center;
+    color: rgb(70, 70, 218);
 }

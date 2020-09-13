@@ -6,7 +6,6 @@ import { HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { LoginHeaderComponent } from './components/login/login-header/login-header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { UsersListComponent } from './components/dashboard/users-list/users-list.component';
 import { ChatComponent } from './components/dashboard/chat/chat.component';
@@ -27,6 +26,8 @@ import { NamePipe } from './pipes/name.pipe';
 import { FriendImgDesignDirective } from './directives/friend-img-design.directive';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { PreviewComponent } from './components/preview/preview.component';
+import { PreLoginHeaderComponent } from './components/pre-login-header/pre-login-header.component';
 
 
 
@@ -34,7 +35,6 @@ import { CreateAccountComponent } from './components/create-account/create-accou
   declarations: [
     AppComponent,
     LoginComponent,
-    LoginHeaderComponent,
     DashboardComponent,
     UsersListComponent,
     ChatComponent,
@@ -46,7 +46,9 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     NamePipe,
     FriendImgDesignDirective,
     ProfileComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    PreviewComponent,
+    PreLoginHeaderComponent
   ],
   imports: [
     BrowserModule,

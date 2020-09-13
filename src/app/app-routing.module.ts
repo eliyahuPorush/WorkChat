@@ -9,6 +9,7 @@ import { ChatComponent } from './components/dashboard/chat/chat.component';
 import { DefaultComponent } from './components/dashboard/default/default.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { PreviewComponent } from './components/preview/preview.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,8 @@ const routes: Routes = [
       { path: "profile", component: ProfileComponent},
       { path: "" , redirectTo: "default", pathMatch: "full"},
   ] },
-  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: "", component: PreviewComponent},
+  // { path: '', redirectTo: 'login', pathMatch: 'full'},
   
 
   // last one 

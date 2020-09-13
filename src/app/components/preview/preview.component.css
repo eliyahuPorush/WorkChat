@@ -1,0 +1,11 @@
+.about{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-size: 50px;
+}
+.desc{
+    font-size: 30px;
+}
