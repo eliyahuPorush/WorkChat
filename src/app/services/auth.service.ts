@@ -29,13 +29,6 @@ export class AuthService {
       .catch(er => console.log(er)
       )
     }
-    loginWithFacebook(){
-      this.auth.signInWithPopup(new auth.FacebookAuthProvider())
-      .then(v => {
-         this.loginSuccess(v) ;
-      })
-      .then(() => this.router.navigate([this.user.email , 'dashboard']) )
-    }
     logout() {
         this.auth.signOut().then(res =>{
         this.user = undefined ;

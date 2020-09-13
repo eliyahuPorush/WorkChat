@@ -21,13 +21,6 @@ export class LoginComponent implements OnInit {
     loginWithGoogle() {
       this.authSRV.loginWithGoogle() ;
     }
-    loginWithFacebook(){
-      this.authSRV.loginWithFacebook() ;
-    }
-    
-
-
-
   ngOnInit(): void {
     
     this.loginForm = new FormGroup({
@@ -39,7 +32,6 @@ export class LoginComponent implements OnInit {
       )
 
   }
-
   onSubmit(){
     let params = [this.loginForm.controls.email.value, this.loginForm.controls.password.value] // email & password
     // if(this.logInText == 'Sign Up') this.authSRV.signUp(params[0], params[1]) ; // sign up method
