@@ -62,6 +62,8 @@ export class AuthService {
   }
   private loginSuccess(res){
     this.user = firebase.auth().currentUser ;
+    console.log(this.user);
+    
     return
   }
   private handleErrorMessage(message: string){
