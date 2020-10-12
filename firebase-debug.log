@@ -1,101 +1,13 @@
-[debug] [2020-10-12T11:42:25.491Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:42:25.492Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:workchat-6040
-[debug] [2020-10-12T11:42:25.492Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:42:25.492Z] Platform:      win32
-[debug] [2020-10-12T11:42:25.492Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:42:25.493Z] Time:          Mon Oct 12 2020 14:42:25 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:42:25.493Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:42:25.493Z] 
-[debug] [2020-10-12T11:42:25.502Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:42:25.502Z] > authorizing via signed-in user
-[debug] [2020-10-12T11:42:25.503Z] [iam] checking project slack-b0c55 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2020-10-12T11:42:25.504Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:42:25.504Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:42:25.579Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:42:25.580Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:42:25.580Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:42:25.623Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:42:25.624Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
-    at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
-[error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
-[debug] [2020-10-12T11:45:15.507Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:45:15.508Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:workchat-6040
-[debug] [2020-10-12T11:45:15.508Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:45:15.508Z] Platform:      win32
-[debug] [2020-10-12T11:45:15.509Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:45:15.509Z] Time:          Mon Oct 12 2020 14:45:15 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:45:15.509Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:45:15.509Z] 
-[debug] [2020-10-12T11:45:15.519Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:45:15.520Z] > authorizing via signed-in user
-[debug] [2020-10-12T11:45:15.520Z] [iam] checking project slack-b0c55 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2020-10-12T11:45:15.521Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:45:15.522Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:45:15.602Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:45:15.605Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:45:15.605Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:45:15.659Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:45:15.661Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
-    at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
-[error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
-[debug] [2020-10-12T11:45:33.938Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:45:33.940Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2020-10-12T11:45:33.940Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:45:33.940Z] Platform:      win32
-[debug] [2020-10-12T11:45:33.940Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:45:33.941Z] Time:          Mon Oct 12 2020 14:45:33 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:45:33.941Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:45:33.942Z] 
-[debug] [2020-10-12T11:45:33.952Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:45:33.952Z] > authorizing via signed-in user
+[debug] [2020-10-12T22:15:47.371Z] ----------------------------------------------------------------------
+[debug] [2020-10-12T22:15:47.372Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-10-12T22:15:47.372Z] CLI Version:   8.6.0
+[debug] [2020-10-12T22:15:47.372Z] Platform:      win32
+[debug] [2020-10-12T22:15:47.372Z] Node Version:  v12.16.1
+[debug] [2020-10-12T22:15:47.373Z] Time:          Tue Oct 13 2020 01:15:47 GMT+0300 (Israel Daylight Time)
+[debug] [2020-10-12T22:15:47.373Z] ----------------------------------------------------------------------
+[debug] [2020-10-12T22:15:47.373Z] 
+[debug] [2020-10-12T22:15:47.380Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-12T22:15:47.380Z] > authorizing via signed-in user
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -107,10 +19,6 @@ You're about to initialize a Firebase project in this directory:
 
   C:\Users\MY - PC\Desktop\projects\Slack-project-private
 
-Before we get started, keep in mind:
-
-  * You are initializing in an existing Firebase project directory
-
 [info] 
 === Project Setup
 [info] 
@@ -118,14 +26,13 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[info] i  .firebaserc already has a default project, using slack-b0c55. 
-[debug] [2020-10-12T11:46:07.819Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:46:07.819Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2020-10-12T22:15:52.175Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-10-12T22:15:52.175Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[debug] [2020-10-12T11:46:07.864Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+[debug] [2020-10-12T22:15:52.221Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
 
 For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:46:07.866Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+[debug] [2020-10-12T22:15:52.222Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
 
 For CI servers and headless environments, generate a new token with firebase login:ci
     at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
@@ -145,105 +52,17 @@ For CI servers and headless environments, generate a new token with firebase log
     at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
     at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
 [error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
-[debug] [2020-10-12T11:46:17.666Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:46:17.667Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
-[debug] [2020-10-12T11:46:17.667Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:46:17.668Z] Platform:      win32
-[debug] [2020-10-12T11:46:17.668Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:46:17.668Z] Time:          Mon Oct 12 2020 14:46:17 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:46:17.669Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:46:17.669Z] 
-[debug] [2020-10-12T11:46:17.677Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:46:17.677Z] > authorizing via signed-in user
-[debug] [2020-10-12T11:46:17.678Z] [iam] checking project slack-b0c55 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2020-10-12T11:46:17.679Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:46:17.679Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:46:17.738Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:46:17.739Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:46:17.739Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:46:17.786Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:46:17.788Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
-    at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
-[error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
-[debug] [2020-10-12T11:47:36.359Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:47:36.361Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting:workchat-6040
-[debug] [2020-10-12T11:47:36.361Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:47:36.361Z] Platform:      win32
-[debug] [2020-10-12T11:47:36.362Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:47:36.363Z] Time:          Mon Oct 12 2020 14:47:36 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:47:36.363Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:47:36.363Z] 
-[debug] [2020-10-12T11:47:36.375Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:47:36.376Z] > authorizing via signed-in user
-[debug] [2020-10-12T11:47:36.376Z] [iam] checking project slack-b0c55 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2020-10-12T11:47:36.378Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:47:36.378Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:47:36.463Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:47:36.464Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:47:36.464Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:47:36.515Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:47:36.516Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
-    at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
-[error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
-[debug] [2020-10-12T11:47:56.480Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:47:56.482Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2020-10-12T11:47:56.482Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:47:56.482Z] Platform:      win32
-[debug] [2020-10-12T11:47:56.482Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:47:56.483Z] Time:          Mon Oct 12 2020 14:47:56 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:47:56.483Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:47:56.483Z] 
-[debug] [2020-10-12T11:47:56.491Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:47:56.492Z] > authorizing via signed-in user
+[error] Error: Failed to list available Google Cloud Platform projects. See firebase-debug.log for more info.
+[debug] [2020-10-12T22:15:56.755Z] ----------------------------------------------------------------------
+[debug] [2020-10-12T22:15:56.756Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-10-12T22:15:56.757Z] CLI Version:   8.6.0
+[debug] [2020-10-12T22:15:56.757Z] Platform:      win32
+[debug] [2020-10-12T22:15:56.757Z] Node Version:  v12.16.1
+[debug] [2020-10-12T22:15:56.758Z] Time:          Tue Oct 13 2020 01:15:56 GMT+0300 (Israel Daylight Time)
+[debug] [2020-10-12T22:15:56.758Z] ----------------------------------------------------------------------
+[debug] [2020-10-12T22:15:56.758Z] 
+[debug] [2020-10-12T22:15:56.765Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-12T22:15:56.765Z] > authorizing via signed-in user
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -255,10 +74,6 @@ You're about to initialize a Firebase project in this directory:
 
   C:\Users\MY - PC\Desktop\projects\Slack-project-private
 
-Before we get started, keep in mind:
-
-  * You are initializing in an existing Firebase project directory
-
 [info] 
 === Project Setup
 [info] 
@@ -266,91 +81,20 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[info] i  .firebaserc already has a default project, using slack-b0c55. 
-[debug] [2020-10-12T11:48:01.170Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:48:01.170Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:48:01.210Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:48:01.211Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
-    at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2020-10-12T22:16:28.507Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2020-10-12T22:16:28.551Z] Error: unable to get local issuer certificate
+    at TLSSocket.onConnectSecure (_tls_wrap.js:1473:34)
+    at TLSSocket.emit (events.js:311:20)
+    at TLSSocket.EventEmitter.emit (domain.js:482:12)
+    at TLSSocket._finishInit (_tls_wrap.js:916:8)
+    at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:686:12)
 [error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
-[debug] [2020-10-12T11:55:32.226Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:55:32.228Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2020-10-12T11:55:32.228Z] CLI Version:   8.6.0
-[debug] [2020-10-12T11:55:32.228Z] Platform:      win32
-[debug] [2020-10-12T11:55:32.228Z] Node Version:  v12.16.1
-[debug] [2020-10-12T11:55:32.229Z] Time:          Mon Oct 12 2020 14:55:32 GMT+0300 (Israel Daylight Time)
-[debug] [2020-10-12T11:55:32.230Z] ----------------------------------------------------------------------
-[debug] [2020-10-12T11:55:32.230Z] 
-[debug] [2020-10-12T11:55:32.242Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-12T11:55:32.242Z] > authorizing via signed-in user
-[info] 
-     ######## #### ########  ######## ########     ###     ######  ########
-     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
-     ######    ##  ########  ######   ########  #########  ######  ######
-     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
-     ##       #### ##     ## ######## ########  ##     ##  ######  ########
-
-You're about to initialize a Firebase project in this directory:
-
-  C:\Users\MY - PC\Desktop\projects\Slack-project-private
-
-Before we get started, keep in mind:
-
-  * You are initializing in an existing Firebase project directory
-
-[info] 
-=== Project Setup
-[info] 
-[info] First, let's associate this project directory with a Firebase project.
-[info] You can create multiple project aliases by running firebase use --add, 
-[info] but for now we'll just set up a default project.
-[info] 
-[info] i  .firebaserc already has a default project, using slack-b0c55. 
-[debug] [2020-10-12T11:55:57.936Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-12T11:55:57.937Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-12T11:55:58.007Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-[debug] [2020-10-12T11:55:58.008Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
-
-For CI servers and headless environments, generate a new token with firebase login:ci
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at Object.<anonymous> (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:20:14)
-    at Module._compile (internal/modules/cjs/loader.js:1158:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1178:10)
-    at Module.load (internal/modules/cjs/loader.js:1002:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:901:14)
-    at Module.require (internal/modules/cjs/loader.js:1044:19)
-    at require (internal/modules/cjs/helpers.js:77:18)
-    at loadCommand (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
-    at module.exports (C:\Users\MY - PC\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:89:20)
-[error] 
-[error] Error: Failed to get Firebase project slack-b0c55. Please make sure the project exists and your account has permission to access it.
+[error] Error: Server Error. unable to get local issuer certificate
