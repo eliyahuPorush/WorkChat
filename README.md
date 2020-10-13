@@ -1,2 +1,4 @@
 # WorkChat
-## talk with your friends and 
+## Talk with your friends and workmates
+
+
