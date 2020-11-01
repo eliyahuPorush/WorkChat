@@ -33,7 +33,9 @@
 
 
     <div class="dash all">
-        <app-users-list (isLoded)="listLoded = true"></app-users-list>
+        <div class="users-list">
+            <app-users-list (isLoded)="listLoded = true"></app-users-list>
+        </div>
         <router-outlet></router-outlet>
     </div>
 </div>
