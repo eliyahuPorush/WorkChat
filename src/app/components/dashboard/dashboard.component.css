@@ -2,16 +2,12 @@
     display: flex ;
     flex-direction: row;
     background-color: white;
-
-
-
 }
 .header{
     background-color: slategray ;
 }
 .nav-link{
     cursor: pointer;
-
 }
 .user-name{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
@@ -34,11 +30,10 @@ header{
     position: relative;
     left: 50%;
 }
+
 ul{
     display: flex;
     flex-direction: row;
-
-
 }
 .image-circle{
     width: 70px;

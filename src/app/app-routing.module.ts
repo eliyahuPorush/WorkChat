@@ -10,11 +10,15 @@ import { DefaultComponent } from './components/dashboard/default/default.compone
 import { ProfileComponent } from './components/profile/profile.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { PreviewComponent } from './components/preview/preview.component';
+import { AboutComponent } from './components/pre-login-header/about/about.component';
+import { ContactComponent } from './components/pre-login-header/contact/contact.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'createAccount', component: CreateAccountComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
   { path: ':user_email/dashboard' , component: DashboardComponent, canActivate: [PathGuardGuard], children: [
       { path: 'chat', canActivateChild:[PathGuardGuard],component: ChatComponent},
       { path: 'add_friend', component: AddFriendComponent},
@@ -23,9 +27,6 @@ const routes: Routes = [
       { path: "" , redirectTo: "default", pathMatch: "full"},
   ] },
   {path: "", component: PreviewComponent},
-  // { path: '', redirectTo: 'login', pathMatch: 'full'},
-  
-
   // last one 
   { path: '**', component: PageNotFoundComponent }
 ];

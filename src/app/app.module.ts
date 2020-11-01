@@ -28,6 +28,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { PreLoginHeaderComponent } from './components/pre-login-header/pre-login-header.component';
+import { ContactComponent } from './components/pre-login-header/contact/contact.component';
+import { AboutComponent } from './components/pre-login-header/about/about.component';
 
 
 
@@ -48,7 +50,9 @@ import { PreLoginHeaderComponent } from './components/pre-login-header/pre-login
     ProfileComponent,
     CreateAccountComponent,
     PreviewComponent,
-    PreLoginHeaderComponent
+    PreLoginHeaderComponent,
+    ContactComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
