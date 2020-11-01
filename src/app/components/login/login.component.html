@@ -8,12 +8,20 @@
         <input type="email" class="form-control mb-1" placeholder="Email address" formControlName="email">
         <input type="password" class="form-control" placeholder="Password" formControlName="password">
         <br>
-        <button  [disabled]="loginForm.invalid" class="btn btn-outline-primary btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>Log In</button>
+        <button *ngIf="!loginPressed"  [disabled]="loginForm.invalid" class="btn btn-outline-primary btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>Log In</button>
+        <button *ngIf="loginPressed" class="btn btn-outline-primary btn-block" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="sr-only">Loading...</span>
+        </button>
         <button (click)="loginWithGoogle()" class="btn btn-outline-danger btn-block" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google</span> </button>
         <br><br>
         <hr>
         <p class="welcome"> OR  </p>
-        <button  (click)="onCreateAccount()" class="btn btn-outline-dark btn-block btn-sm" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Create A New Account</button>
+        <button *ngIf="!createNewAccountPressed" (click)="onCreateAccount()" class="btn btn-outline-dark btn-block btn-sm" type="button"><i class="fas fa-user-plus"></i> Create A New Account</button>
+        <button *ngIf="createNewAccountPressed" class="btn btn-outline-dark btn-block btn-sm" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="sr-only">Loading...</span><i class="fas fa-user-plus"></i>
+        </button>
         <div *ngIf="errorMessage" class="row alert alert-danger">{{errorMessage}}</div>
         </form>
     </div>

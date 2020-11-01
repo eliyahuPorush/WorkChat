@@ -1,8 +1,9 @@
 <div class="messages-cont">
     <ul *ngFor="let message of messages | async">
-    <div [ngClass]="{owner: ownerMessage(message[1])}" class="message">{{message[0]}}</div>
-</ul>
+        <div [ngClass]="{owner: ownerMessage(message[1])}" class="message">{{message[0]}}</div>
+    </ul>
 </div>
+<div class="alert alert-info" *ngIf="!haveMessages">You haven't received any messages yet</div>
 
 <!-- <div *ngIf="!messagesLoded" class="spinner-border" role="status">   spinner !!
     <span class="sr-only">Loading...</span>

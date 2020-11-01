@@ -45,4 +45,13 @@ ul{
 /* .users-list{
     position: fixed ;
     
+}
+
+.messages-section{
+    position: relative;
+    left: 13% ;
 } */
+.messages-dash{
+    position: relative;
+    left: 15% ;
+}

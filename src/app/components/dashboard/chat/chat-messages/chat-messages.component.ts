@@ -16,6 +16,7 @@ import { ReversePipe } from 'ngx-pipes';
 export class ChatMessagesComponent implements OnInit {
   messages: Observable<string[]> ;
   messagesLoded: boolean = false ;  // try to show loading spinner  --   dosent work!
+  haveMessages: boolean = false ;
   constructor(
     private activeRoute: ActivatedRoute,
     private friendSRV: FriendsDataService,
@@ -32,6 +33,7 @@ export class ChatMessagesComponent implements OnInit {
     this.activeRoute.queryParams.subscribe(
       () => {
     this.messages = this.friendSRV.getFriendMessages() ;
+    this.haveMessages = true ;
   })
 }
 

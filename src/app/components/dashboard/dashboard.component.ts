@@ -12,6 +12,7 @@ export class DashboardComponent implements OnInit {
   user: firebase.User ;
   userName: string ;
   listLoded: boolean = false ;
+  isLogout: boolean ;
   photo: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB1SJI2ncD_F_122VV6wxuQadDLU3sLl8EYw&usqp=CAU' ;
   constructor(
     private authSRV: AuthService,
@@ -20,6 +21,7 @@ export class DashboardComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.isLogout = false ;
     this.user = firebase.auth().currentUser ;
     this.userName = this.user.displayName ;
     this.photo = this.user.photoURL ;
@@ -28,7 +30,10 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['add_friend'], {relativeTo: this.activeRoute})
   }
   logout() {
-    this.authSRV.logout() ;
+    this.isLogout = true ;
+    setTimeout(() => {
+      this.authSRV.logout() ;
+    },2500)
   }
   profile(){
     this.router.navigate([ this.user.email, 'dashboard','profile'])
