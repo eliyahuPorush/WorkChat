@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-group">
                     <label for="alies">image URL</label>
-                    <input type="url" formControlName="alies" class="form-control">
+                    <input #imageFile (change)="onChange(imageFile)" type="file" formControlName="alies" class="form-control-file">
                 </div>
                 <div class="form-group">
                 <button class="btn btn-outline-danger" type="Submit">Submit</button>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { Observable } from 'rxjs';
 import { FriendsDataService } from 'src/app/services/friends-data.service';
-import { tap, map } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 import { ReversePipe } from 'ngx-pipes';
 
@@ -15,7 +14,7 @@ import { ReversePipe } from 'ngx-pipes';
 })
 export class ChatMessagesComponent implements OnInit {
   messages: Observable<string[]> ;
-  messagesLoded: boolean = false ;  // try to show loading spinner  --   dosent work!
+  messagesLoded: boolean = false ;  // for display spinner until the messages loded
   haveMessages: boolean = false ;
   constructor(
     private activeRoute: ActivatedRoute,
@@ -25,20 +24,30 @@ export class ChatMessagesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.messages = this.friendSRV.getFriendMessages().pipe(
-      tap(() => this.messagesLoded = true)
-      )
-    
+    this.messages = this.friendSRV.getFriendMessages() ;
+    this.messages.subscribe(m => {
+      this.messagesLoded = true // deactivate the spinner
+      this.haveMessages = m.length > 0 ;
+    }) 
     
     this.activeRoute.queryParams.subscribe(
       () => {
+    this.messagesLoded = false ; // activate the spinner 
     this.messages = this.friendSRV.getFriendMessages() ;
-    this.haveMessages = true ;
+    this.messages.subscribe( m => {
+      this.messagesLoded = true ; // deactivate the spinner
+      this.haveMessages = m.length > 0 ; 
+    } )
+    this.haveMessages = true ; // deactivate the spinner
   })
 }
 
 ownerMessage(owner: string){
   return owner == this.authSRV.getUser().email
+}
+
+thereIsAmeassages(m){
+  return m.length > 0 
 }
 
 }

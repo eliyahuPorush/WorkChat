@@ -23,6 +23,6 @@ export class ProfileComponent implements OnInit {
   }
   onSubmit(){
     let contols = this.profileForm.controls ;
-    this.authSRV.updateProfile(contols.name.value, contols.alies.value, contols.email.value) ;
+    this.authSRV.updateProfile(contols.name.value, contols.email.value) ;
   }
 }

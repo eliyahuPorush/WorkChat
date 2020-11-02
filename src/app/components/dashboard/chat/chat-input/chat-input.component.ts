@@ -18,8 +18,10 @@ friendEmail: string ;
   }
   onSend(){
     let text = this.textContnent.nativeElement.value;
-    this.friendSRV.addText(text) ;
-    this.textContnent.nativeElement.value = '' ;
+    if(text != ""){
+      this.friendSRV.addText(text) ;
+      this.textContnent.nativeElement.value = '' ;
+    }
     
   }
 }

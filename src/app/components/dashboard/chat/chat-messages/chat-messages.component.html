@@ -2,11 +2,14 @@
     <ul *ngFor="let message of messages | async">
         <div [ngClass]="{owner: ownerMessage(message[1])}" class="message">{{message[0]}}</div>
     </ul>
+    <!-- spinner -->
+    <div class="d-flex justify-content-center">
+        <div class="alert alert-dark" *ngIf="!haveMessages">You haven't received any messages yet...</div>
+        <div *ngIf="!messagesLoded" class="spinner-border text-secondary" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
 </div>
-<div class="alert alert-info" *ngIf="!haveMessages">You haven't received any messages yet</div>
 
-<!-- <div *ngIf="!messagesLoded" class="spinner-border" role="status">   spinner !!
-    <span class="sr-only">Loading...</span>
-</div> -->
 
 <!-- spiner need to take care of -->

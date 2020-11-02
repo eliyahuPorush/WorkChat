@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-create-account',
@@ -10,6 +11,8 @@ import { AuthService } from 'src/app/services/auth.service';
 export class CreateAccountComponent implements OnInit {
   createAccountForm: FormGroup ;
   errorMessage: string ;
+  imageURL: string ;
+  image ;
   constructor(
     private authSRV: AuthService
   ) { }
@@ -31,11 +34,24 @@ export class CreateAccountComponent implements OnInit {
         form.controls.name.value,
         form.controls.email.value,
         form.controls.password1.value,
-        image
+        // this.imageURL
       )
+    firebase.storage().ref().child('profileImage/' + form.controls.email.value).put(this.image)
+
       
     }
     else this.errorMessage = 'your inputs are invalid. try again'  
+  }
+
+
+  onChange(e: ElementRef){
+    this.image = e['files'][0] ;
+    let fileReader = new FileReader() ;
+    // fileReader.readAsDataURL(image) ;
+    // fileReader.onload = e => {
+    //   this.imageURL = e.target.result as string ;
+    // }
+    
   }
 
 }

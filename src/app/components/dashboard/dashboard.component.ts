@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
   userName: string ;
   listLoded: boolean = false ;
   isLogout: boolean ;
+  imageFile ;
   photo: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB1SJI2ncD_F_122VV6wxuQadDLU3sLl8EYw&usqp=CAU' ;
   constructor(
     private authSRV: AuthService,
@@ -23,6 +24,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.isLogout = false ;
     this.user = firebase.auth().currentUser ;
+    this.imageFile = firebase.storage().refFromURL(`gs://workchat-6060.appspot.com/${this.user.email}/profileImage.png`)
     this.userName = this.user.displayName ;
     this.photo = this.user.photoURL ;
   }

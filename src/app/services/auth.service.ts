@@ -36,10 +36,10 @@ export class AuthService {
         this.isLogedIn.next(false) ;
       });
     }
-  signUp(name:string, email: string, password: string, alies: string){
+  signUp(name:string, email: string, password: string){
     this.auth.createUserWithEmailAndPassword(email, password)
       .then(res => {
-          this.updateProfile(name, alies, email) ;
+          this.updateProfile(name, email) ;
       })
       .then(() => this.logIn(email, password))
       .then(() => this.isLogedIn.next(true))
@@ -54,6 +54,7 @@ export class AuthService {
       this.loginSuccess(res) ;
     })
     .then(() => this.router.navigate([this.user.email , 'dashboard']) )
+    .then(() => console.log(this.user))
     .then(() => this.isLogedIn.next(true))
     .catch(error => {
       let errorMassege = error.message ;
@@ -75,11 +76,11 @@ export class AuthService {
     }
 
   }
-  updateProfile(name: string, imgURL: string, email: string) {  
+  updateProfile(name: string, email: string) {  
     firebase.auth().currentUser.updateEmail(email) ;
     firebase.auth().currentUser.updateProfile({
       displayName: name,
-      photoURL: imgURL
+      // photoURL: imgURL
     }) ;
 }
   getUser(){

@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
     this.createNewAccountPressed = true ;
     setTimeout(() => {
       this.router.navigate(['/createAccount'])
-    },2000)
+    },1000)
   }
 
 }
