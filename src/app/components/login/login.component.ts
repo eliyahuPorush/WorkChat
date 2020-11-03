@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
       this.authSRV.loginWithGoogle() ;
     }
   ngOnInit(): void {
+    // console.log("storage: ", firebase.storage().refFromURL('gs://workchat-6060.appspot.com/profileImage'))
     
     this.loginForm = new FormGroup({
       email: new FormControl('tamar@gmail.com', [Validators.required, Validators.email]),

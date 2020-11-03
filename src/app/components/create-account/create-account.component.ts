@@ -34,11 +34,8 @@ export class CreateAccountComponent implements OnInit {
         form.controls.name.value,
         form.controls.email.value,
         form.controls.password1.value,
-        // this.imageURL
       )
-    firebase.storage().ref().child('profileImage/' + form.controls.email.value).put(this.image)
-
-      
+      firebase.storage().ref().child(`profileImage-${form.controls.email.value}/`).put(this.image)
     }
     else this.errorMessage = 'your inputs are invalid. try again'  
   }

@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   listLoded: boolean = false ;
   isLogout: boolean ;
   imageFile ;
-  photo: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB1SJI2ncD_F_122VV6wxuQadDLU3sLl8EYw&usqp=CAU' ;
+  // photo: string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB1SJI2ncD_F_122VV6wxuQadDLU3sLl8EYw&usqp=CAU' ;
   constructor(
     private authSRV: AuthService,
     private router: Router,
@@ -24,9 +24,11 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.isLogout = false ;
     this.user = firebase.auth().currentUser ;
-    this.imageFile = firebase.storage().refFromURL(`gs://workchat-6060.appspot.com/${this.user.email}/profileImage.png`)
+    firebase.storage().ref().child(`profileImage-${this.user.email}/`).getDownloadURL().then(url => {
+      this.imageFile = url ;
+    })
     this.userName = this.user.displayName ;
-    this.photo = this.user.photoURL ;
+    // this.photo = this.user.photoURL ;
   }
   addFriend(){
     this.router.navigate(['add_friend'], {relativeTo: this.activeRoute})

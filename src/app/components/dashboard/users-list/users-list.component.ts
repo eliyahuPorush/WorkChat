@@ -11,6 +11,7 @@ import { EventEmitter } from '@angular/core';
 })
 export class UsersListComponent implements OnInit {
  friends:Observable<any> ;
+ 
  @Output() isLoded: EventEmitter<boolean> = new EventEmitter<boolean>() ;
  
 
