@@ -14,7 +14,7 @@ export class AuthService {
   user:firebase.User ;
   isLogedIn = new BehaviorSubject<boolean>(false) ;
   errorFound = new Subject<string>() ;
-
+  defaultImage = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB1SJI2ncD_F_122VV6wxuQadDLU3sLl8EYw&usqp=CAU' ;
   constructor(
     private router: Router,
     public auth: AngularFireAuth
@@ -78,10 +78,12 @@ export class AuthService {
   }
   updateProfile(name: string, email: string) {  
     firebase.auth().currentUser.updateEmail(email) ;
-    firebase.auth().currentUser.updateProfile({
+    firebase.storage().ref().child(`profileImage-${email}/`).getDownloadURL().then(url => {
+      firebase.auth().currentUser.updateProfile({
       displayName: name,
-      // photoURL: imgURL
-    }) ;
+      photoURL: url })
+    }) 
+     
 }
   getUser(){
     return this.user ;

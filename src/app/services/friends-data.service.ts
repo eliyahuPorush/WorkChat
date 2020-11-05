@@ -4,6 +4,7 @@ import { AuthService } from './auth.service';
 import { Friend } from '../models/friend.model';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { ActivatedRoute } from '@angular/router';
+import * as firebase from 'firebase';
 
 
 @Injectable({
@@ -31,13 +32,18 @@ export class FriendsDataService {
 
     let name = friend.name ;
     let email = friend.email ;
-    let imgURL ;
-   
-        this.db.collection(friend.email + "-details").doc("details").valueChanges().subscribe(
-        details => {
-          imgURL = details ? details["imgURL"]: "";
-          this.db.firestore.collection(this.authSRV.getUser().email + '-friends').doc(friend.email).set({name, email, imgURL}) ;
-        })
+    let imageURL = '' ;
+    firebase.storage().ref().child(`profileImage-${email}/`).getDownloadURL().then( url =>  {
+      imageURL = url ;  // check if the friend have 
+      this.db.collection(friend.email + "-details").doc("details").valueChanges().subscribe(
+      details => {
+        this.db.firestore.collection(this.authSRV.getUser().email + '-friends').doc(friend.email).set({name, email, imageURL}) ;
+      })
+    })
+    .catch( error => {
+      this.db.firestore.collection(this.authSRV.getUser().email + '-friends').doc(friend.email).set({name, email, imageURL}) ;
+    })
+    
   }
   getFriendMessages(){
     let activeFriendEmail = this.activeRoute.snapshot.queryParams["friend"] ;

@@ -24,7 +24,12 @@ export class UsersListComponent implements OnInit {
   ngOnInit(): void {
     
      this.friends = this.friendsData.getFriendsFromServer() ;
-     this.friends.subscribe(() => this.isLoded.emit(true))
+     this.friends.subscribe(friends => {
+       this.isLoded.emit(true)
+        console.log(friends);
+        
+      })
+       
   }
  
   friendSelected(friendEmail: string){

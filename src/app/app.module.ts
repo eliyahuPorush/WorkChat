@@ -30,6 +30,7 @@ import { PreviewComponent } from './components/preview/preview.component';
 import { PreLoginHeaderComponent } from './components/pre-login-header/pre-login-header.component';
 import { ContactComponent } from './components/pre-login-header/contact/contact.component';
 import { AboutComponent } from './components/pre-login-header/about/about.component';
+import { ButtonClickLoadDirective } from './directives/button-click-load.directive';
 
 
 
@@ -52,7 +53,8 @@ import { AboutComponent } from './components/pre-login-header/about/about.compon
     PreviewComponent,
     PreLoginHeaderComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
+    ButtonClickLoadDirective
   ],
   imports: [
     BrowserModule,

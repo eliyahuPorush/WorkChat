@@ -28,14 +28,21 @@ export class CreateAccountComponent implements OnInit {
   }
   onSubmit(){
     let form = this.createAccountForm ;
-    let image = form.controls.alies.value == null ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRB1SJI2ncD_F_122VV6wxuQadDLU3sLl8EYw&usqp=CAU': form.controls.alies.value ;
     if( (form.controls.password1.value == form.controls.password2.value) && form.valid){
       this.authSRV.signUp(
         form.controls.name.value,
         form.controls.email.value,
         form.controls.password1.value,
       )
-      firebase.storage().ref().child(`profileImage-${form.controls.email.value}/`).put(this.image)
+      if(!!this.image){ // if image upload
+        firebase.storage().ref().child(`profileImage-${form.controls.email.value}/`).put(this.image)
+      }
+      //  else {
+      //   let defaultImage: FormData = new FormData().append('default', defaultImageProfile)
+
+      //    firebase.storage().ref().child(`profileImage-${form.controls.email.value}/`).put(this.image)
+      //   }
+        
     }
     else this.errorMessage = 'your inputs are invalid. try again'  
   }
@@ -43,7 +50,7 @@ export class CreateAccountComponent implements OnInit {
 
   onChange(e: ElementRef){
     this.image = e['files'][0] ;
-    let fileReader = new FileReader() ;
+    // let fileReader = new FileReader() ;
     // fileReader.readAsDataURL(image) ;
     // fileReader.onload = e => {
     //   this.imageURL = e.target.result as string ;

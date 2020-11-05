@@ -6,7 +6,7 @@ interface Friend{
   name:string ;
   email: string ;
   text: string[] ;
-  imgURL?:string ;
+  imageURL?:string ;
 }
 
 @Component({

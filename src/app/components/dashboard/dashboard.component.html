@@ -2,17 +2,14 @@
         <span class="sr-only">Loading...</span>
     </div>
 <div [ngClass]="{blur: !listLoded}">
-    <header class="header justify-content-end">
+    <header class="header">
         <ul class="nav d-flex justify-content-between">
             <ul class="nav d-flex justify-content-between">
-                <li class="nav-item">
-                    <a class="nav-link btn-outline-dark btn-sm text-light" (click)="addFriend()">Add Friend</a>
-                </li>
                 <li *ngIf="!isLogout" class="nav-item">
-                    <a class="nav-link btn-outline-dark btn-sm text-light" (click)="logout()">Logout</a>
+                    <a class="nav-link" (click)="logout()">Logout</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn-outline-dark btn-sm text-light" (click)="profile()">My Profile</a>
+                    <a class="nav-link" (click)="profile()">My Profile</a>
                 </li>
                 <li *ngIf="isLogout">
                     <div class="spinner-grow text-warning" role="status">
@@ -32,6 +29,7 @@
                     <img 
                     class="nav-item image-circle" 
                     src="{{imageFile}}"
+                    onerror="this.src='/assets/defaultImageProfile.jpg'"
                     >
             </h3>
         </li>

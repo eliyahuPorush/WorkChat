@@ -6,6 +6,7 @@ export class Friend{
     constructor(
         public name:string,
         public email:string,
-        public messages?: Message[]
+        public messages?: Message[],
+        public imageURL?: string
         ){}
 }

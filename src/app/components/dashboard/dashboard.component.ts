@@ -24,9 +24,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.isLogout = false ;
     this.user = firebase.auth().currentUser ;
-    firebase.storage().ref().child(`profileImage-${this.user.email}/`).getDownloadURL().then(url => {
-      this.imageFile = url ;
-    })
+    this.imageFile = this.user.photoURL ;
     this.userName = this.user.displayName ;
     // this.photo = this.user.photoURL ;
   }

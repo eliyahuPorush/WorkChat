@@ -9,3 +9,9 @@
  .welcome{
     text-align: center;
     } 
+
+    label{
+        color:#005abb ; 
+        font-family: italic;
+        font-weight: bold;
+    }
