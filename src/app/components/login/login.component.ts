@@ -27,8 +27,8 @@ export class LoginComponent implements OnInit {
     // console.log("storage: ", firebase.storage().refFromURL('gs://workchat-6060.appspot.com/profileImage'))
     
     this.loginForm = new FormGroup({
-      email: new FormControl('eliyahuporush@gmail.com', [Validators.required, Validators.email]),
-      password: new FormControl('eliyahu6040', [Validators.required, Validators.minLength(6)])
+      email: new FormControl('tamar@gmail.com', [Validators.required, Validators.email]),
+      password: new FormControl('tamar6040', [Validators.required, Validators.minLength(6)])
     })
     this.authSRV.errorFound.subscribe(error => {
       this.errorMessage = error ;
